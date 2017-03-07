@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Publisher="ssw.jku.at" Id="63c2b4b8-8a51-4fc4-b8ed-0b49e24146c3" Version="2017.4.19.0" Language="en-US" />
+    <DisplayName>CocoPlugin</DisplayName>
+    <Description xml:space="preserve" >This plugin enables the use of Coco/R inside Visual Studio 2015</Description>
+    <MoreInfo>http://www.ssw.jku.at/coco/</MoreInfo>
+    <License>license.txt</License>
+    <Icon>Resources\Package.ico</Icon>
+    <Tags>Coco</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Community" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Enterprise" />
+  </Installation>
+  <Dependencies>
+    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" Version="[12.0,13.0)" />
+    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.Platform" DisplayName="Microsoft Visual Studio Shell Components" Version="[11.0,12.0)" />
+    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.ErrorListPkg" DisplayName="Microsoft Visual Studio Editor" Version="[14.0,15.0)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Code\Grammar.zip" />
+  </Assets>
+</PackageManifest>

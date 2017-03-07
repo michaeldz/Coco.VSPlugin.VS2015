@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <style type="text/css">
+        span { border: 1px solid black; text-align: center; background-color: Yellow; position: relative; z-index: 5;}
+    </style>
+</head>
+<body style="font-family: Courier New">
+
+    <p>
+        Cocol = <br /> <span>0</span>{ANY} // using clauses in C#, import clauses in Java,<br />  
+        // #include 
+        clauses in C++ <br /> 
+        <span>1</span>&quot;COMPILER&quot; <span>2</span>ident <span>3</span><br /> 
+         {ANY} // global fields and methods <br /> 
+        ScannerSpecification <br /> 
+        Parserspecification <br /> 
+        &quot;END&quot;<span>42</span> ident<span>43</span> &#39;.&#39;<span>45</span>.<br /> <br /> 
+        ScannerSpecification = <br /> 
+        [&quot;IGNORECASE&quot; <span>4</span>] <br /> 
+        [&quot;CHARACTERS&quot;<span>9</span> {SetDecl} <br /> 
+        [&quot;TOKENS&quot; {TokenDecl}] <br /> 
+        [&quot;PRAGMAS&quot; {PragmaDecl}] <br /> 
+        {CommentDecl} <br /> 
+        {WhiteSpaceDecl}. <br /> 
+        SetDecl = <span>5</span>ident &#39;=&#39; Set &#39;.&#39; <span>9</span>. <br /> 
+        Set =BasicSet {(&#39;+&#39;|&#39;-&#39;) BasicSet}. <br /> 
+        BasicSet =  <span>6</span> string | ident | char [&quot;..&quot; <span>8</span>char] | &quot;ANY&quot; <span>7</span>. <br /> 
+        TokenDecl = <span>10</span>Symbol [&#39;=&#39; TokenExpr &#39;.&#39;] <span>18</span>. <br /> 
+        TokenExpr = TokenTerm {&#39;|&#39; TokenTerm}. <br /> 
+        TokenTerm = TokenFactor {TokenFactor} [&quot;CONTEXT&quot; &#39;(&#39; TokenExpr &#39;)&#39;]. <br /> 
+        TokenFactor = <span>11</span> Symbol <br /> 
+        | &#39;(&#39;<span>12</span> TokenExpr &#39;)&#39;<span>13</span> <br /> 
+        | &#39;[&#39;<span>14</span> TokenExpr &#39;]&#39;<span>15</span> <br /> 
+        | &#39;{&#39;<span>16</span> TokenExpr &#39;}&#39;<span>17</span>. <br /> 
+        Symbol = <span>50</span>ident | string | char. <br /> 
+        PragmaDecl = TokenDecl <span>19</span> [SemAction]. <br />
+        CommentDecl = &quot;COMMENTS&quot; <span>20</span>&quot;FROM&quot; TokenExpr <span>21</span>&quot;TO&quot; TokenExpr <span>22</span>[&quot;NESTED&quot;].<br /> 
+        WhiteSpaceDecl = &quot;IGNORE&quot; Set <span>23</span>. <br /> <br /> 
+        ParserSpecification = &quot;PRODUCTIONS&quot;<span>46</span> {Production}. <br /> 
+        Production = <span>25</span>ident <span>26</span>[<span>39</span> Attributes <span>44</span>] [SemAction] &#39;=&#39; Expression &#39;.&#39;.<span>41</span> <br /> 
+        Expression = <span>29</span>Term {&#39;|&#39;<span>29</span> Term}. <br /> 
+        Term = [[Resolver <span>27</span>] Factor {Factor}]. <br /> 
+        Factor = [&quot;WEAK&quot; <span>37</span>] Symbol <span>38</span>[<span>39</span> Attributes <span>36</span>] <br /> 
+        | &#39;(&#39;<span>30</span> Expression &#39;)&#39;<span>33</span> <br /> 
+        | &#39;[&#39;<span>31</span> Expression &#39;]&#39;<span>34</span> <br /> 
+        | &#39;{&#39;<span>32</span> Expression &#39;}&#39;<span>35</span> <br /> 
+        | &quot;ANY&quot; <br /> 
+        | &quot;SYNC&quot; <br /> 
+        | SemAction <span>36</span>. <br /> 
+        Attributes = &#39;&lt;&#39; {ANY} &#39;&gt;&#39; | &quot;&lt;.&quot; {ANY} &quot;.&gt;&quot;. <br /> 
+        SemAction = &quot;(.&quot; <span>40</span>{ANY} &quot;.)&quot;. <br /> 
+        Resolver = &quot;IF&quot; <span>28</span>&#39;(&#39; {ANY} &#39;)&#39; .
+    </p>
+
+</body>
+</html>
