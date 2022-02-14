@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Publisher="ssw.jku.at" Id="63c2b4b8-8a51-4fc4-b8ed-0b49e24146c3" Version="2020.1.0.0" Language="en-US" />
-    <DisplayName>CocoPlugin</DisplayName>
-    <Description xml:space="preserve" >This plugin enables the use of Coco/R inside Visual Studio 2015 - 2019</Description>
-    <MoreInfo>http://www.ssw.jku.at/coco/</MoreInfo>
-    <License>license.txt</License>
-    <Icon>Resources\Package.ico</Icon>
-    <Tags>Coco</Tags>
-  </Metadata>
-  <Installation>
-    <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Community" />
-    <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Pro" />
-    <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Enterprise" />
-  </Installation>
-  <Dependencies>
-    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.Platform" DisplayName="Microsoft Visual Studio Shell Components" Version="[11.0,12.0)" />
-    <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.ErrorListPkg" DisplayName="Microsoft Visual Studio Editor" Version="[14.0,15.0)" />
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Code\Grammar.zip" />
-  </Assets>
-  <Prerequisites>
-    <Prerequisite Id="Microsoft.Net.Component.4.6.1.TargetingPack" Version="[15.0.26208.0,)" DisplayName=".NET Framework 4.6.1 targeting pack" />
-  </Prerequisites>
+    <Metadata>
+        <Identity Publisher="ssw.jku.at" Id="63c2b4b8-8a51-4fc4-b8ed-0b49e24146c3" Version="2020.1.0.0" Language="en-US" />
+        <DisplayName>CocoPlugin</DisplayName>
+        <Description xml:space="preserve" >This plugin enables the use of Coco/R inside Visual Studio 2015 - 2019</Description>
+        <MoreInfo>http://www.ssw.jku.at/coco/</MoreInfo>
+        <License>license.txt</License>
+        <Icon>Resources\Package.ico</Icon>
+        <Tags>Coco</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Community" />
+        <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Pro" />
+        <InstallationTarget Version="[14.0,17.0)" Id="Microsoft.VisualStudio.Enterprise" />
+    </Installation>
+    <Dependencies>
+        <Dependency d:Source="Installed" Id="Microsoft.VisualStudio.Platform" DisplayName="Microsoft Visual Studio Shell Components" Version="[11.0,12.0)" />
+        <Dependency d:Source="Installed" Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Platform.Editor" DisplayName="Microsoft Visual Studio Editor" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+        <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Code\Grammar.zip" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.Net.Component.4.7.2.TargetingPack" Version="[16.10.31205.252,17.0)" DisplayName=".NET Framework 4.7.2 targeting pack" />
+    </Prerequisites>
 </PackageManifest>
